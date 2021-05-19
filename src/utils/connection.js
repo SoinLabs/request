@@ -1,4 +1,4 @@
-const { Sequelize } = require('sequelize');
+const { Sequelize } = require('@soinlabs/sequelize');
 const path = require('path')
 
 const connection = async (connectionError) => {

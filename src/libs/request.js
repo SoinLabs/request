@@ -6,17 +6,18 @@ const { createRequestOptions } = require('../utils/helpers')
    * Promise function based on HTTP client
    * @async
    * @function Request
-   * @param {object} params - Object
-   * @property {string}  params.method - Default GET
-   * @property {object}  params.headers - Default { content-type: application/json }
-   * @property {string}  params.url - Required
-   * @property {string}  params.responseType - Default json
-   * @property {object}  params.data - Default null
+   * @param {object} options - Object
+   * @property {string}  options.method - Default GET
+   * @property {object}  options.headers - Default { content-type: application/json }
+   * @property {string}  options.url - Required
+   * @property {string}  options.responseType - Default json
+   * @property {object}  options.data - Default null
+   * @property {object}  options.params - Default null
    * @return {array} The data from the URL.
    */
-   const Request = async (params) => {
+   const Request = async (options) => {
     try {
-      const opt = createRequestOptions(params)
+      const opt = createRequestOptions(options)
 
       const response = await axios(opt)
       const { data } = response

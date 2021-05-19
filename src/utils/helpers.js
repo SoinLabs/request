@@ -1,4 +1,4 @@
-const { DataTypes } = require('sequelize')
+const { DataTypes } = require('@soinlabs/sequelize')
 const { adapterAxiosError } = require('./adapters-errors')
 const { JSON, INTEGER,STRING } = DataTypes
 
@@ -7,8 +7,8 @@ const printError = error => {
   console.error(message)
 }
 
-const createRequestOptions = params => {
-  const { method, headers, url, responseType, data } = params
+const createRequestOptions = options => {
+  const { method, headers, url, responseType, data, params } = options
   if (!url) adapterAxiosError('URL can not be undefined')
   const opt = {
     method: method || 'GET',
@@ -16,6 +16,7 @@ const createRequestOptions = params => {
     url,
     responseType: responseType || 'json',
     data: data || null,
+    params: params || {}
   }
   return opt
 }

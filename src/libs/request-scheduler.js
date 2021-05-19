@@ -1,5 +1,5 @@
 const Request = require('./request')
-const { Sequelize } = require('sequelize');
+const { Sequelize } = require('@soinlabs/sequelize');
 const { adapterModelError } = require('../utils/adapters-errors');
 const { Op } = Sequelize
 
