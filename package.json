@@ -12,7 +12,7 @@
     "traceability"
   ],
   "scripts": {
-    "test": "set NODE_ENV=testing && jest --forceExit --detectOpenHandles --silent",
+    "test": "env NODE_ENV=testing jest --forceExit --detectOpenHandles --silent",
     "test:debug": "yarn test:clean && env NODE_ENV=testing jest --forceExit --detectOpenHandles"
   },
   "devDependencies": {
@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "axios": "^0.30.0",
-    "chalk": "^4.1.0",
+    "chalk": "^4.1.2",
     "sequelize": "^6.37.7"
   },
   "jest": {
