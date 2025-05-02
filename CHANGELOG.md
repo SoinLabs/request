@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [1.0.22] - 2025-05-02
+
+Update dependencies of the package.json
+
 ## [1.0.21] - 2025-04-09
 
 Added support for string instead of objects responses when error occurs
