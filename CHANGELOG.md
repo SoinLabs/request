@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [1.0.23] - 2025-07-24
+
+Improvements made to error handling in the response to identify the original error instead of returning a generic message
+
 ## [1.0.22] - 2025-05-02
 
 Update dependencies of the package.json
